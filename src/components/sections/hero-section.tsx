@@ -32,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="w-full">
+      <section className="w-full">
         <div className="w-full max-w-[90rem] px-6 lg:px-[138px] mx-auto bg-white pt-[60px] lg:pt-[5.375rem] pb-[80px] lg:pb-[8.125rem] flex flex-col gap-[60px] lg:gap-[4.75rem]">
           <div className="flex flex-col gap-[1.1875rem]">
             <h1 className="text-black font-bold text-[40px] lg:text-[3.75rem] leading-[120%] lg:leading-[105%]">
@@ -97,11 +97,16 @@ const HeroSection = () => {
                   "max-w-[246px]",
                 ];
                 return (
-                  <div key={index} className="flex flex-col items-center lg:items-start gap-[18px] lg:gap-[1.125rem] text-center lg:text-left">
-                    <h1 className="text-[60px] lg:text-[3.75rem] font-semibold font-[source-serif] leading-none lg:leading-[100%]">
+                  <div
+                    key={index}
+                    className="flex flex-col items-center lg:items-start gap-[18px] lg:gap-[1.125rem] text-center lg:text-left group transition-all duration-500 hover:-translate-y-2 cursor-default"
+                  >
+                    <h1 className="text-[60px] lg:text-[3.75rem] font-semibold font-[source-serif] leading-none lg:leading-[100%] transition-colors duration-500 group-hover:text-[#009582]">
                       {stat.stat}
                     </h1>
-                    <p className={`text-[24px] lg:text-[1.5rem] leading-[1.2] lg:leading-[120%] ${mobileWidths[index]} lg:max-w-[22.625rem] font-normal font-['Source_Sans_Pro']`}>
+                    <p
+                      className={`text-[24px] lg:text-[1.5rem] leading-[1.2] lg:leading-[120%] ${mobileWidths[index]} lg:max-w-[22.625rem] font-normal font-[source-sans-pro] transition-colors duration-500 group-hover:text-[#444]`}
+                    >
                       {stat.description}
                     </p>
                   </div>
@@ -110,7 +115,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

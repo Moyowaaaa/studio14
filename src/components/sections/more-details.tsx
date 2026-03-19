@@ -9,7 +9,7 @@ import ellen from "../../assets/images/ellen.svg";
 const MoreDetails = () => {
   return (
     <>
-      <div className="max-w-[90rem] flex flex-col items-center mx-auto pb-[80px] pt-[60px] lg:pb-[10.0625rem] lg:pt-[8.375rem] px-6 lg:px-0">
+      <section className="max-w-[90rem] flex flex-col items-center mx-auto pb-[80px] pt-[60px] lg:pb-[10.0625rem] lg:pt-[8.375rem] px-6 lg:px-0">
         <div className="w-full lg:w-[72.25rem] max-w-[72.25rem] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-[60px] lg:gap-0">
           <div className="flex flex-col gap-[1.6875rem] w-full lg:w-auto">
             <h1 className="text-[40px] lg:text-[3.75rem] font-[source-serif] leading-[120%] lg:leading-[100%] font-semibold max-w-[29.375rem]">
@@ -29,26 +29,50 @@ const MoreDetails = () => {
           {/* MoreDetails/ */}
           <div className="w-full lg:w-[36.375rem] grid grid-cols-2 gap-x-[0.75rem]">
             <div className="pb-[30px] lg:pb-[45px] border-b border-b-[#95A4B8] flex flex-col items-center justify-center min-h-[80px] lg:min-h-0">
-              <img src={pestalozzi} alt="pestalozzi" className="w-[123px] lg:w-auto object-contain" />
+              <img
+                src={pestalozzi}
+                alt="pestalozzi"
+                className="w-[123px] lg:w-auto object-contain"
+              />
             </div>
             <div className="pb-[30px] lg:pb-[45px] border-b border-b-[#95A4B8] flex flex-col items-center justify-center min-h-[80px] lg:min-h-0">
-              <img src={horizon} alt="horizon" className="w-[94px] lg:w-auto object-contain" />
+              <img
+                src={horizon}
+                alt="horizon"
+                className="w-[94px] lg:w-auto object-contain"
+              />
             </div>
             <div className="pb-[30px] lg:pb-[45px] pt-[30px] lg:pt-[2.8125rem] border-b border-b-[#95A4B8] flex flex-col items-center justify-center min-h-[100px] lg:min-h-0">
-              <img src={rsacademics} alt="rsacademics" className="w-[123px] lg:w-auto object-contain" />
+              <img
+                src={rsacademics}
+                alt="rsacademics"
+                className="w-[123px] lg:w-auto object-contain"
+              />
             </div>
             <div className="pb-[30px] lg:pb-[45px] pt-[30px] lg:pt-[2.8125rem] border-b border-b-[#95A4B8] flex flex-col items-center justify-center min-h-[100px] lg:min-h-0">
-              <img src={rise} alt="rise" className="w-[67px] lg:w-auto object-contain" />
+              <img
+                src={rise}
+                alt="rise"
+                className="w-[67px] lg:w-auto object-contain"
+              />
             </div>
             <div className="pt-[30px] lg:pt-[2.8125rem] pb-[10px] lg:pb-[45px] border-b-0 lg:border-b lg:border-b-[#95A4B8] flex flex-col items-center justify-center min-h-[80px] lg:min-h-0">
-              <img src={teachForAll} alt="teachForAll" className="w-[111px] lg:w-auto object-contain" />
+              <img
+                src={teachForAll}
+                alt="teachForAll"
+                className="w-[111px] lg:w-auto object-contain"
+              />
             </div>
             <div className="pt-[30px] lg:pt-[2.8125rem] pb-[10px] lg:pb-[45px] border-b-0 lg:border-b lg:border-b-[#95A4B8] flex flex-col items-center justify-center min-h-[80px] lg:min-h-0">
-              <img src={ellen} alt="ellen" className="w-[81px] lg:w-auto object-contain" />
+              <img
+                src={ellen}
+                alt="ellen"
+                className="w-[81px] lg:w-auto object-contain"
+              />
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

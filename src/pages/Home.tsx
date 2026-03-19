@@ -31,7 +31,6 @@ const Home = () => {
           </p>
 
           <div className="flex items-center gap-[10px] ml-[38px]">
-            {/* Dropdown 1 */}
             <div className="bg-white h-[52px] w-[314px] flex items-center justify-between px-[30px] cursor-pointer">
               <p className="font-[Poppins] text-[16px] text-[#1c1c1c] leading-[1.6]">
                 I&apos;m a student
@@ -46,14 +45,13 @@ const Home = () => {
                 <path
                   d="M2.00006 2L8.25006 9.35849L14.5001 2"
                   stroke="#271837"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
 
-            {/* Dropdown 2 */}
             <div className="bg-white h-[52px] w-[483px] flex items-center justify-between px-[30px] cursor-pointer">
               <p className="font-[Poppins] text-[16px] text-[#1c1c1c] leading-[1.6]">
                 I want to find out about applications
@@ -68,9 +66,9 @@ const Home = () => {
                 <path
                   d="M2.00006 2L8.25006 9.35849L14.5001 2"
                   stroke="#271837"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>

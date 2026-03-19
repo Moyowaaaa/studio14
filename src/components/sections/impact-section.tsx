@@ -133,7 +133,7 @@ export const ImpactSection = () => {
 
   return (
     <>
-      <div className="w-full bg-[#EDF5FF] pt-[60px] pb-[80px] md:pt-[7.1875rem] md:pb-[9.25rem] flex flex-col gap-[40px] md:gap-[62px]">
+      <section className="w-full bg-[#EDF5FF] pt-[60px] pb-[80px] md:pt-[7.1875rem] md:pb-[9.25rem] flex flex-col gap-[40px] md:gap-[62px]">
         <div className="w-full max-w-[90rem] mx-auto px-6 md:px-[162px] flex flex-col md:flex-row items-start justify-between gap-8 md:gap-0">
           <div className="flex flex-col gap-4 md:gap-[29px]">
             <h1 className="font-semibold text-[40px] md:text-[3.75rem] leading-[120%] md:leading-[100%]">
@@ -189,7 +189,7 @@ export const ImpactSection = () => {
               <div className="h-[362px] md:h-[36.9375rem] w-full md:w-[40.8125rem] md:min-w-[40.8125rem] overflow-hidden rounded-lg md:rounded-none">
                 <img
                   src={slide.image}
-                  alt=""
+                  alt={slide.title}
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
@@ -233,7 +233,7 @@ export const ImpactSection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 };

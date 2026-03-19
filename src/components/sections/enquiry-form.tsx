@@ -3,7 +3,7 @@ import React from "react";
 const EnquiryFormSection = () => {
   return (
     <>
-      <div className="w-full">
+      <section className="w-full">
         <div className="h-max flex justify-end max-w-[90rem] mx-auto px-4 md:px-[8.1875rem]">
           <div
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -33,19 +33,27 @@ const EnquiryFormSection = () => {
         flex flex-col gap-8 md:gap-[2.4375rem]
         mx-auto pt-16 pb-16 md:pt-[8.375rem] md:pb-[9.75rem] items-center px-4 md:px-0"
           >
-            <h1 className="
+            <h1
+              className="
             font-[source-serif]
-            text-center font-semibold text-4xl md:text-[3.75rem] leading-[100%] text-white max-w-full md:max-w-[40.125rem]">
+            text-center font-semibold text-4xl md:text-[3.75rem] leading-[100%] text-white max-w-full md:max-w-[40.125rem]"
+            >
               We are present in over 150 countries
             </h1>
 
-            <div className="w-full relative max-w-[56.3219rem] flex flex-col gap-8 md:gap-[3.3125rem] items-center">
+            <form
+              onSubmit={() => {
+                console.log("submitted");
+              }}
+              className="w-full relative max-w-[56.3219rem] flex flex-col gap-8 md:gap-[3.3125rem] items-center"
+            >
               <div className="flex flex-col gap-4 md:gap-[1.375rem] w-full">
                 <div className="grid grid-cols-1 gap-4 md:gap-[1.6244rem] ">
                   <div className="relative w-full">
                     <input
                       type="text"
                       placeholder=" "
+                      aria-required="true"
                       className="peer w-full h-[3.75rem] 
                     px-[2rem]
                     text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
@@ -55,20 +63,35 @@ const EnquiryFormSection = () => {
                       Subject <span className="text-red-500">*</span>
                     </span>
 
-<span className="absolute right-[2rem] top-1/2 -translate-y-1/2">
-<svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
-<g clip-path="url(#clip0_2_1609)">
-<path d="M2.30432 4.45605L7.04295 8.83106L11.7816 4.45606L13.677 5.33106L7.04295 11.4561L0.40887 5.33105L2.30432 4.45605Z" fill="#525252"/>
-</g>
-<defs>
-<clipPath id="clip0_2_1609">
-<rect x="16.0886" y="6.49291e-07" width="14.8541" height="16.0886" rx="5" transform="rotate(90 16.0886 6.49291e-07)" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-</span>
-
+                    <span className="absolute right-[2rem] top-1/2 -translate-y-1/2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="15"
+                        viewBox="0 0 17 15"
+                        fill="none"
+                      >
+                        <g clipPath="url(#clip0_2_1609)">
+                          <path
+                            d="M2.30432 4.45605L7.04295 8.83106L11.7816 4.45606L13.677 5.33106L7.04295 11.4561L0.40887 5.33105L2.30432 4.45605Z"
+                            fill="#525252"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_1609">
+                            <rect
+                              x="16.0886"
+                              y="6.49291e-07"
+                              width="14.8541"
+                              height="16.0886"
+                              rx="5"
+                              transform="rotate(90 16.0886 6.49291e-07)"
+                              fill="white"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
                   </div>
                 </div>
 
@@ -77,6 +100,7 @@ const EnquiryFormSection = () => {
                     <input
                       type="text"
                       placeholder=" "
+                      aria-required="true"
                       className="peer w-full h-[3.75rem] max-h-[3.75rem]
                     px-[2rem]
                     text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
@@ -88,9 +112,12 @@ const EnquiryFormSection = () => {
                   </div>
                   <div className="relative w-full">
                     <input
-                      type="text"
+                      type="email"
+                      autoComplete="email"
+                      aria-required="true"
                       placeholder=" "
                       className="peer w-full h-[3.75rem]
+                      
                     px-[2rem]
                     text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
                     max-h-[3.75rem] bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-[#ad1644] focus:ring-1 focus:ring-[#ad1644]"
@@ -114,6 +141,7 @@ const EnquiryFormSection = () => {
               </div>
 
               <button
+                type="submit"
                 className="w-full md:w-[14.375rem]
           text-[1.125rem] font-bold leading-[120%]
           md:max-w-[14.375rem] flex items-center
@@ -122,10 +150,10 @@ const EnquiryFormSection = () => {
               >
                 Submit
               </button>
-            </div>
+            </form>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

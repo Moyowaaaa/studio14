@@ -56,7 +56,7 @@ const LocationsSection = () => {
   ];
   return (
     <>
-      <div className="w-full max-w-[90rem] mx-auto flex justify-center pb-[5.6875rem] px-6 lg:px-0">
+      <section className="w-full max-w-[90rem] mx-auto flex justify-center pb-[5.6875rem] px-6 lg:px-0">
         <div className="w-full lg:w-[71rem] flex flex-col gap-[3.25rem]">
           <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-0">
             <h1 className="text-[40px] lg:text-[3.75rem] font-semibold leading-[120%] lg:leading-[100%] max-w-[40.125rem]">
@@ -251,7 +251,7 @@ const LocationsSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
