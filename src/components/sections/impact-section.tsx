@@ -1,4 +1,3 @@
-import React from "react";
 import impactImage2 from "../../assets/images/impact-image2.png";
 
 export const ImpactSection = () => {
