@@ -40,6 +40,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "source-sans-3";
+  src:
+    local("source-sans-3"),
+    url("./assets/fonts/SourceSans3.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @media screen and (min-width: 1000px) {
   body {
     scroll-behavior: smooth;
@@ -47,4 +57,8 @@
   html {
     scroll-behavior: smooth;
   }
+}
+
+button {
+  font-family: "source-sans-pro";
 }

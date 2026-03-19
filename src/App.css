@@ -15,9 +15,8 @@
   overflow-x: hidden;
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   html {
-    /* font-size: calc(100vw / 2000 * 16); */
     font-size: calc(80vw / 1440 * 16);
   }
-}
+} */
