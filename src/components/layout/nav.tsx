@@ -13,9 +13,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full mx-auto fixed top-0 z-50">
-        {/* Top Bar */}
-        <div className="w-full mx-auto h-[3.1875rem] bg-[#EEEEEE] flex justify-center ">
+      <div className="w-full mx-auto  top-0 z-50">
+        <div className="w-full mx-auto h-[3.1875rem] bg-[#EEEEEE] hidden md:flex justify-center ">
           <div className="h-full w-full max-w-[90rem] mx-auto flex pl-[37px] ">
             <div className="w-full max-w-[90rem]  flex justify-between items-center h-full">
               <div className="self-start w-[6.5rem] px-[0.6875rem] flex items-center justify-between bg-white h-[31px] cursor-pointer">
@@ -36,28 +35,16 @@ const Navbar = () => {
               <div className="flex items-center gap-[1rem] h-full">
                 <a
                   href="#"
-                  className="text-[#009482] font-bold font-[source-sans-3] text-[1.125rem]
-                  leading-[140%]
-                  hover:underline"
+                  className="text-[#009482] font-bold font-[source-sans-pro] text-[1rem] hover:underline"
                 >
                   EAB Hub
                 </a>
                 <span className="text-[#222222] font-light">|</span>
                 <button className="flex items-center gap-[0.5rem] text-[#222222] font-bold font-[source-sans-pro] text-[1rem] hover:text-[#009482] transition-colors">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M8.23633 2.28418C4.93062 2.28441 2.28441 4.93062 2.28418 8.23633C2.28418 11.5422 4.93047 14.1892 8.23633 14.1895C11.5424 14.1895 14.1895 11.5424 14.1895 8.23633C14.1892 4.93047 11.5422 2.28418 8.23633 2.28418ZM14.1895 14.7354L14.1162 14.6621L13.7734 14.3203L13.6104 14.1562L13.4346 14.3066C11.9852 15.5437 10.1418 16.2235 8.23633 16.2236C6.11826 16.2235 4.08657 15.3815 2.58887 13.8838C1.09133 12.386 0.25 10.3543 0.25 8.23633C0.250116 6.11826 1.09116 4.08657 2.58887 2.58887C4.08657 1.09116 6.11826 0.250116 8.23633 0.25C10.3543 0.25 12.386 1.09133 13.8838 2.58887C15.3815 4.08657 16.2235 6.11826 16.2236 8.23633C16.2236 10.2143 15.4989 12.0332 14.3066 13.4346L14.1572 13.6104L14.3203 13.7734L14.6621 14.1162L14.7354 14.1895H15.7363L19.2871 17.7402L17.7402 19.2871L14.1895 15.7363V14.7354Z"
-                      fill="black"
-                      stroke="black"
-                      stroke-width="0.5"
-                    />
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+<path d="M12.8496 3.7041C7.76948 3.7041 3.7041 7.76948 3.7041 12.8496C3.70424 17.9296 7.76956 21.9951 12.8496 21.9951C17.9295 21.995 21.995 17.9295 21.9951 12.8496C21.9951 7.76956 17.9296 3.70424 12.8496 3.7041ZM21.9951 23.0449L21.9219 22.9717L21.3877 22.4385L21.2246 22.2744L21.0488 22.4248C18.7626 24.3762 15.8554 25.448 12.8496 25.4482C9.50817 25.4482 6.30324 24.1215 3.94043 21.7588C1.57765 19.396 0.250067 16.1911 0.25 12.8496C0.25 9.50805 1.57759 6.30327 3.94043 3.94043C6.30327 1.57759 9.50805 0.25 12.8496 0.25C16.1911 0.250067 19.396 1.57765 21.7588 3.94043C24.1215 6.30324 25.4482 9.50817 25.4482 12.8496C25.4482 15.9699 24.3053 18.8385 22.4248 21.0488L22.2754 21.2246L22.4385 21.3877L22.9717 21.9219L23.0449 21.9951H24.6064L30.2871 27.6758L27.6758 30.2871L21.9951 24.6064V23.0449Z" fill="black" stroke="black" stroke-width="0.5"/>
+</svg>
+
                   Search
                 </button>
               </div>
@@ -66,7 +53,11 @@ const Navbar = () => {
         </div>
 
         <div className="w-full flex justify-center bg-white shadow-sm">
-          <div className="h-max max-w-[90rem] py-[1.0625rem] pl-[62.71px] pr-[37.66px] w-full items-center flex justify-between bg-white gap-[151px]">
+          <div
+            className="h-max max-w-[90rem] py-[1.0625rem] 
+          px-[1.5rem]
+          md:pl-[62.71px] md:pr-[37.66px] w-full items-center flex justify-between bg-white gap-[151px]"
+          >
             <div className="flex items-center gap-[0.25rem]">
               <img
                 src={logo}
@@ -78,7 +69,25 @@ const Navbar = () => {
               </h1>
             </div>
 
-            <div className="flex items-center gap-[1.75rem]">
+            {/* Mobile Icons */}
+            <div className="flex md:hidden items-center gap-[30px]">
+              {/* Search Icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+<path d="M12.8496 3.7041C7.76948 3.7041 3.7041 7.76948 3.7041 12.8496C3.70424 17.9296 7.76956 21.9951 12.8496 21.9951C17.9295 21.995 21.995 17.9295 21.9951 12.8496C21.9951 7.76956 17.9296 3.70424 12.8496 3.7041ZM21.9951 23.0449L21.9219 22.9717L21.3877 22.4385L21.2246 22.2744L21.0488 22.4248C18.7626 24.3762 15.8554 25.448 12.8496 25.4482C9.50817 25.4482 6.30324 24.1215 3.94043 21.7588C1.57765 19.396 0.250067 16.1911 0.25 12.8496C0.25 9.50805 1.57759 6.30327 3.94043 3.94043C6.30327 1.57759 9.50805 0.25 12.8496 0.25C16.1911 0.250067 19.396 1.57765 21.7588 3.94043C24.1215 6.30324 25.4482 9.50817 25.4482 12.8496C25.4482 15.9699 24.3053 18.8385 22.4248 21.0488L22.2754 21.2246L22.4385 21.3877L22.9717 21.9219L23.0449 21.9951H24.6064L30.2871 27.6758L27.6758 30.2871L21.9951 24.6064V23.0449Z" fill="black" stroke="black" stroke-width="0.5"/>
+</svg>
+
+
+              {/* Hamburger Icon */}
+              <button className="text-black hover:text-[#009482] transition-colors flex flex-col gap-[7px] w-[33px]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="27" viewBox="0 0 33 27" fill="none">
+<line x1="2" y1="2" x2="30.7047" y2="2" stroke="black" stroke-width="4" stroke-linecap="square"/>
+<line x1="2" y1="13.2773" x2="30.7047" y2="13.2773" stroke="black" stroke-width="4" stroke-linecap="square"/>
+<line x1="2" y1="24.5557" x2="30.7047" y2="24.5557" stroke="black" stroke-width="4" stroke-linecap="square"/>
+</svg>
+              </button>
+            </div>
+
+            <div className="hidden md:flex items-center gap-[1.75rem]">
               <div className="flex items-center gap-[1.125rem]">
                 {navLinks.map((link, index) => (
                   <div
@@ -120,7 +129,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="h-[8.5rem] w-full"></div>
+      {/* <div className="h-[8.5rem] w-full"></div> */}
     </>
   );
 };

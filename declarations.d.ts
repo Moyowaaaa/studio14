@@ -1,13 +1,21 @@
-declare module "*.svg" {
-  import * as React from "react";
-  export const ReactComponent: React.FunctionComponent<
-    React.SVGAttributes<SVGElement>
-  >;
-  const content: string;
-  export default content;
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["declarations.d.ts", "src", "vite-env.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
-declare module "*.ttf";
-
-declare module "*.otf";
-
-declare module "locomotive-scroll";

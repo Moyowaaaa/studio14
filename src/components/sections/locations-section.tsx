@@ -56,15 +56,15 @@ const LocationsSection = () => {
   ];
   return (
     <>
-      <div className="max-w-[90rem]  mx-auto flex justify-center pb-[5.6875rem]">
-        <div className="w-[71rem]  flex flex-col gap-[3.25rem]">
-          <div className="pw-full flex items-start justify-between">
-            <h1 className="text-[3.75rem] font-semibold leading-[100%] max-w-[40.125rem]">
+      <div className="w-full max-w-[90rem] mx-auto flex justify-center pb-[5.6875rem] px-6 lg:px-0">
+        <div className="w-full lg:w-[71rem] flex flex-col gap-[3.25rem]">
+          <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-0">
+            <h1 className="text-[40px] lg:text-[3.75rem] font-semibold leading-[120%] lg:leading-[100%] max-w-[40.125rem]">
               We are present in over 150 countries
             </h1>
 
-            <div className="flex  items-center ">
-              <p className="pb-[0.1875rem] border-b border-black font-[source-sans-pro] text-[1.5rem] leading-[120%]">
+            <div className="flex items-center group cursor-pointer md:mt-4">
+              <p className="pb-[0.1875rem] border-b border-black font-[source-sans-pro] text-[24px] lg:text-[1.5rem] leading-[120%] transition-colors duration-300 group-hover:text-[#004A97] group-hover:border-[#004A97]">
                 See all National Schools
               </p>
 
@@ -74,123 +74,176 @@ const LocationsSection = () => {
                 height="15"
                 viewBox="0 0 43 15"
                 fill="none"
+                className="transition-transform duration-300 group-hover:translate-x-2 ml-2"
               >
                 <path
                   d="M36.671 14.961L43 7.9805L36.671 1L35.3229 2.7246L39.0218 6.80383H4V9.15717H39.0218L35.3229 13.2368L36.671 14.961Z"
                   fill="black"
+                  className="transition-colors duration-300 group-hover:fill-[#004A97]"
                 />
                 <rect width="26" height="13" fill="white" />
               </svg>
             </div>
           </div>
 
-          <div className="w-full  flex items-center gap-[20px]">
+          <div
+            className="w-full overflow-x-auto hide-scrollbar flex items-center gap-[20px] pb-4"
+            style={{ scrollbarWidth: "none" }}
+          >
             {locations.map((location) => (
               <div
                 key={location.name}
                 className={`${
                   location.isSelected
-                    ? "pl-[7px] border-b-[3px] border-b-[#004a97]"
-                    : ""
-                } w-max flex items-center gap-[0.8125rem]`}
+                    ? "pl-[7px] border-b-[3px] border-b-[#004a97] opacity-100"
+                    : "opacity-30 hover:opacity-100"
+                } w-max  flex items-center gap-[0.8125rem] cursor-pointer transition-all duration-300 hover:-translate-y-1`}
               >
-                <img src={location.flag} alt="flag" />
-                <p className="text-sm font-semibold leading-[1.9375rem] font-[source-sans-3]">
+                <img
+                  src={location.flag}
+                  alt="flag"
+                  className="w-[44px] h-[44px] object-contain"
+                />
+                <p className="text-sm font-semibold leading-[1.9375rem] font-[source-sans-3] whitespace-nowrap">
                   {location.name}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="w-full  grid grid-cols-3 gap-[1.625rem]">
-            <div className="relative w-full h-[36.8125rem] ">
-              <img
-                src={locationImage1}
-                alt="location image 1"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.625rem]">
+            {/* Card 1 */}
+            <div className="relative w-full h-auto lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col lg:block">
+              <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
+                <img
+                  src={locationImage1}
+                  alt="location image 1"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute w-[74px] h-[36px] left-[1.375rem] top-[1.6875rem] flex items-center justify-center bg-[#ad1644] lg:hidden">
+                  <p className="text-sm font-semibold text-white leading-[120%] font-[source-sans-pro]">
+                    Apply
+                  </p>
+                </div>
+              </div>
+
               <div
-                className="absolute inset-x-0 bottom-0 h-[404px]"
+                className="hidden lg:block absolute inset-x-0 bottom-0 h-[404px]"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(222, 99, 40, 0.00) 0%, #AD1644 71.19%)",
                 }}
               />
 
-              <div className="absolute inset-0 z-5 w-full h-full  px-[1.75rem] pb-[2.0625rem] pt-[1.6875rem] flex flex-col  gap-[41px] justify-end">
-                <div className="w-[74px] h-[36px] flex items-center justify-center bg-white ">
-                  <p className="text-sm font-semibold text-black leading-[120%] font-[source-sans-pro]">
+              <div className="w-full h-[217px] lg:h-full bg-[#ad1644] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+                <div className="mb-[41px] w-[74px] h-[36px] hidden md:flex items-center justify-center bg-white ">
+                  <p className="text-sm font-normal text-black leading-[120%] font-[source-sans-pro]">
                     Germany
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-[1.25rem]">
-                  <h1 className="font-semibold text-[1.25rem] leading-[120%] text-white max-w-[290px]">
+                  <h1 className="font-[source-serif] font-semibold text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[290px]">
                     Leveraging the EAB Ripple Effect' for Youth-led Social
                     Change
                   </h1>
-                  <button className="h-[3rem] max-h-[3rem] w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-sm font-semibold self-start">
-                    Read more
+                  <button
+                    className=" 
+                  font-[source-sans-pro]
+                  
+                  h-[3rem] max-h-[3rem] w-[180px] lg:w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-[18px]  font-bold lg:font-semibold self-start transition-all duration-300 hover:bg-black hover:text-white"
+                  >
+                    Find out more
                   </button>
                 </div>
               </div>
             </div>
-            <div className="relative w-full h-[36.8125rem] ">
-              <img
-                src={locationImage2}
-                alt="location image 2"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+
+            {/* Card 2 */}
+            <div className="relative w-full h-auto lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col lg:block">
+              <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
+                <img
+                  src={locationImage2}
+                  alt="location image 2"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#009482] text-white flex items-center justify-center lg:hidden">
+                  <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
+                    Alumni Network
+                  </p>
+                </div>
+              </div>
+
               <div
-                className="absolute inset-x-0 bottom-0 h-[404px]"
+                className="hidden lg:block absolute inset-x-0 bottom-0 h-[404px]"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(0, 148, 130, 0.00) 0%, #009482 58.65%)",
                 }}
               />
-              <div className="absolute inset-0 z-5 w-full h-full  px-[1.75rem] pb-[2.0625rem] pt-[1.6875rem] flex flex-col  gap-[41px] justify-end">
-                <div className="absolute w-[115px] h-[36px]   left-[1.375rem] top-[1.6875rem] bg-[#009482] text-white flex items-center justify-center">
+
+              <div className="w-full h-[217px] lg:h-full bg-[#009482] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+                <div className="hidden lg:flex absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#009482] text-white items-center justify-center">
                   <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
                     Alumni Network
                   </p>
                 </div>
 
-                <h1 className="font-semibold text-[1.25rem] leading-[120%] text-white max-w-[250px]">
-                  A title about volunteering in this National Schools
-                </h1>
-
                 <div className="flex flex-col gap-[1.25rem]">
-                  <button className="h-[3rem] max-h-[3rem] w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-sm font-semibold self-start">
+                  <h1 className="font-[source-serif] font-semibold flex items-center text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[285px] md:h-[92px]">
+                    A title about volunteering in this National Schools
+                  </h1>
+                  <button
+                    className="
+                  font-[source-sans-pro]
+                  
+                  h-[3rem] max-h-[3rem] w-[180px] lg:w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-[18px] font-bold lg:font-semibold self-start transition-all duration-300 hover:bg-black hover:text-white"
+                  >
                     Volunteer
                   </button>
                 </div>
               </div>
             </div>
-            <div className="relative w-full h-[36.8125rem] ">
-              <img
-                src={locationImage3}
-                alt="location image 3"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+
+            {/* Card 3 */}
+            <div className="relative w-full h-auto lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col lg:block">
+              <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
+                <img
+                  src={locationImage3}
+                  alt="location image 3"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white flex items-center justify-center lg:hidden">
+                  <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
+                    What's happening
+                  </p>
+                </div>
+              </div>
+
               <div
-                className="absolute inset-x-0 bottom-0 h-[404px]"
+                className="hidden lg:block absolute inset-x-0 bottom-0 h-[404px]"
                 style={{
                   background:
                     "linear-gradient(346deg, #004A97 40.7%, rgba(0, 148, 130, 0.00) 90.12%)",
                 }}
               />
-              <div className="absolute inset-0 z-5 w-full h-full  px-[1.75rem] pb-[2.0625rem] pt-[1.6875rem] flex flex-col  gap-[41px] justify-end">
-                <div className="absolute w-[125px] h-[36px]   left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white flex items-center justify-center">
+
+              <div className="w-full h-[217px] lg:h-full bg-[#0059B9] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+                <div className="hidden lg:flex absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white items-center justify-center">
                   <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
                     What's happening
                   </p>
                 </div>
 
-                <h1 className="font-semibold text-[1.25rem] leading-[120%] text-white max-w-[260px]">
-                  This is a blog/Impact Story linked to this National Schools
-                </h1>
-                <div className="flex flex-col gap-[1.25rem]">
-                  <button className="h-[3rem] max-h-[3rem] w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-sm font-semibold self-start">
+                <div className="flex flex-col gap-[1.25rem] md:gap-[2.625rem]">
+                  <h1 className="font-[source-serif] font-semibold text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[299px]">
+                    This is a blog/Impact Story linked to this National Schools
+                  </h1>
+                  <button
+                    className="
+                  font-[source-sans-pro]
+                  h-[3rem] max-h-[3rem] w-[180px] lg:w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-[1.125rem] font-bold lg:font-semibold self-start transition-all duration-300 hover:bg-black hover:text-white"
+                  >
                     Read more
                   </button>
                 </div>
