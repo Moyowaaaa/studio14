@@ -9,9 +9,9 @@ import ellen from "../../assets/images/ellen.svg";
 const MoreDetailsSection = () => {
   return (
     <>
-      <section className="max-w-[90rem] flex flex-col items-center mx-auto pb-[80px] pt-[60px] lg:pb-[10.0625rem] lg:pt-[8.375rem] px-6 lg:px-0">
-        <div className="w-full lg:w-[72.25rem] max-w-[72.25rem] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-[60px] lg:gap-0">
-          <div className="flex flex-col gap-[1.6875rem] w-full lg:w-auto">
+      <section className="max-w-[90rem] flex flex-col items-center mx-auto pb-[80px] pt-[60px] md:pb-[6rem] md:pt-[5rem] lg:pb-[10.0625rem] lg:pt-[8.375rem] px-6 md:px-12 lg:px-0">
+        <div className="w-full lg:w-[72.25rem] max-w-[72.25rem] flex flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-center justify-between gap-[60px] md:gap-10 lg:gap-0">
+          <div className="flex flex-col gap-[1.6875rem] w-full md:w-[45%] lg:w-auto md:shrink-0">
             <h2 className="text-[40px] lg:text-[3.75rem] font-serif leading-[120%] lg:leading-[100%] font-semibold max-w-[29.375rem]">
               A little bit about our work at EAB
             </h2>
@@ -27,7 +27,7 @@ const MoreDetailsSection = () => {
           </div>
 
           {/* MoreDetails/ */}
-          <div className="w-full lg:w-[36.375rem] grid grid-cols-2 gap-x-[0.75rem]">
+          <div className="w-full md:w-[50%] lg:w-[36.375rem] grid grid-cols-2 gap-x-[0.75rem]">
             <div className="pb-[30px] lg:pb-[45px] border-b border-b-muted flex flex-col items-center justify-center min-h-[80px] lg:min-h-0">
               <img
                 src={pestalozzi}

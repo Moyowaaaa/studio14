@@ -4,7 +4,7 @@ const EnquiryFormSection = () => {
   return (
     <>
       <section className="w-full">
-        <div className="h-max flex justify-end max-w-[90rem] mx-auto px-4 md:px-[8.1875rem]">
+        <div className="h-max flex justify-end max-w-[90rem] mx-auto px-4 md:px-12 lg:px-[8.1875rem]">
           <div
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="group h-[49px] bg-navy w-[159px] hidden md:flex items-center justify-between px-[1rem] cursor-pointer transition-colors duration-300 hover:bg-[#104076]"
@@ -31,7 +31,7 @@ const EnquiryFormSection = () => {
           <div
             className="w-full max-w-[90rem] 
         flex flex-col gap-8 md:gap-[2.4375rem]
-        mx-auto pt-16 pb-16 md:pt-[8.375rem] md:pb-[9.75rem] items-center px-4 md:px-0"
+        mx-auto pt-16 pb-16 md:pt-[6rem] md:pb-[7rem] lg:pt-[8.375rem] lg:pb-[9.75rem] items-center px-4 md:px-12 lg:px-0"
           >
             <h1
               className="

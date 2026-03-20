@@ -33,9 +33,9 @@ const LocationsSection = () => {
   ];
   return (
     <>
-      <section className="w-full max-w-[90rem] mx-auto flex justify-center pb-[5.6875rem] px-6 lg:px-0">
+      <section className="w-full max-w-[90rem] mx-auto flex justify-center pb-[5.6875rem] px-6 md:px-8 lg:px-0">
         <div className="w-full lg:w-[71rem] flex flex-col gap-[3.25rem]">
-          <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-6 lg:gap-0">
+          <div className="w-full flex flex-col md:flex-row items-start justify-between gap-6 md:gap-4 lg:gap-0">
             <h1 className="text-[40px] lg:text-[3.75rem] font-semibold leading-[120%] lg:leading-[100%] max-w-[40.125rem]">
               We are present in over 150 countries
             </h1>
@@ -91,14 +91,14 @@ const LocationsSection = () => {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.625rem]">
             {/* Card 1 */}
-            <div className="relative w-full h-auto lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col lg:block">
-              <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
+            <div className="relative w-full h-auto md:h-[28rem] lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col md:block">
+              <div className="relative w-full h-[372px] md:h-full md:absolute md:inset-0 overflow-hidden">
                 <img
                   src={locationImage1}
                   alt=" program in Germany"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute w-[74px] h-[36px] left-[1.375rem] top-[1.6875rem] flex items-center justify-center bg-secondary lg:hidden">
+                <div className="absolute w-[74px] h-[36px] left-[1.375rem] top-[1.6875rem] flex items-center justify-center bg-secondary md:hidden">
                   <p className="text-sm font-semibold text-white leading-[120%] font-sans">
                     Apply
                   </p>
@@ -106,14 +106,14 @@ const LocationsSection = () => {
               </div>
 
               <div
-                className="hidden lg:block absolute inset-x-0 bottom-0 h-[404px]"
+                className="hidden md:block absolute inset-x-0 bottom-0 h-[404px]"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(222, 99, 40, 0.00) 0%, #AD1644 71.19%)",
                 }}
               />
 
-              <div className="w-full h-[217px] lg:h-full bg-secondary lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+              <div className="w-full h-[217px] md:h-full bg-secondary md:bg-transparent md:absolute md:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
                 <div className="mb-[41px] w-[74px] h-[36px] hidden md:flex items-center justify-center bg-white ">
                   <p className="text-sm font-normal text-black leading-[120%] font-sans">
                     Germany
@@ -138,14 +138,14 @@ const LocationsSection = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="relative w-full h-auto lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col lg:block">
-              <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
+            <div className="relative w-full h-auto md:h-[28rem] lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col md:block">
+              <div className="relative w-full h-[372px] md:h-full md:absolute md:inset-0 overflow-hidden">
                 <img
                   src={locationImage2}
                   alt="Alimni network"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-accent text-white flex items-center justify-center lg:hidden">
+                <div className="absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-accent text-white flex items-center justify-center md:hidden">
                   <p className="text-sm font-sans text-white leading-[120%]">
                     Alumni Network
                   </p>
@@ -153,15 +153,15 @@ const LocationsSection = () => {
               </div>
 
               <div
-                className="hidden lg:block absolute inset-x-0 bottom-0 h-[404px]"
+                className="hidden md:block absolute inset-x-0 bottom-0 h-[404px]"
                 style={{
                   background:
                     "linear-gradient(180deg, rgba(0, 148, 130, 0.00) 0%, #009482 58.65%)",
                 }}
               />
 
-              <div className="w-full h-[217px] lg:h-full bg-accent lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
-                <div className="hidden lg:flex absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-accent text-white items-center justify-center">
+              <div className="w-full h-[217px] md:h-full bg-accent md:bg-transparent md:absolute md:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+                <div className="hidden md:flex absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-accent text-white items-center justify-center">
                   <p className="text-sm font-sans text-white leading-[120%]">
                     Alumni Network
                   </p>
@@ -184,14 +184,14 @@ const LocationsSection = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="relative w-full h-auto lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col lg:block">
-              <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
+            <div className="relative w-full h-auto md:h-[28rem] lg:h-[36.8125rem] group overflow-hidden cursor-pointer  flex flex-col md:block">
+              <div className="relative w-full h-[372px] md:h-full md:absolute md:inset-0 overflow-hidden">
                 <img
                   src={locationImage3}
                   alt="whats happening "
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white flex items-center justify-center lg:hidden">
+                <div className="absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white flex items-center justify-center md:hidden">
                   <p className="text-sm font-sans text-white leading-[120%]">
                     What's happening
                   </p>
@@ -199,15 +199,15 @@ const LocationsSection = () => {
               </div>
 
               <div
-                className="hidden lg:block absolute inset-x-0 bottom-0 h-[404px]"
+                className="hidden md:block absolute inset-x-0 bottom-0 h-[404px]"
                 style={{
                   background:
                     "linear-gradient(346deg, #004A97 40.7%, rgba(0, 148, 130, 0.00) 90.12%)",
                 }}
               />
 
-              <div className="w-full h-[217px] lg:h-full bg-[#0059B9] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
-                <div className="hidden lg:flex absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white items-center justify-center">
+              <div className="w-full h-[217px] md:h-full bg-[#0059B9] md:bg-transparent md:absolute md:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+                <div className="hidden md:flex absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white items-center justify-center">
                   <p className="text-sm font-sans text-white leading-[120%]">
                     What's happening
                   </p>

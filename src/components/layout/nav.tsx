@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full mx-auto top-0 z-50 fixed md:relative">
-        <div className="w-full mx-auto h-[3.1875rem] bg-[#EEEEEE] hidden md:flex justify-center ">
+      <nav className="w-full mx-auto top-0 z-50 fixed lg:relative">
+        <div className="w-full mx-auto h-[3.1875rem] bg-[#EEEEEE] hidden lg:flex justify-center ">
           <div className="h-full w-full max-w-[90rem] mx-auto flex pl-[37px] ">
             <div className="w-full max-w-[90rem]  flex justify-between items-center h-full">
               <div className="self-start w-[6.5rem] px-[0.6875rem] flex items-center justify-between bg-white h-[31px] cursor-pointer">
@@ -65,11 +65,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-center bg-white shadow-sm h-[119px] md:h-auto relative z-20">
+        <div className="w-full flex justify-center bg-white shadow-sm h-[119px] lg:h-auto relative z-20">
           <div
             className="h-full max-w-[90rem] 
             px-[26px]
-            md:py-[1.0625rem] md:pl-[62.71px] md:pr-[37.66px] w-full items-center flex justify-between bg-white md:gap-[151px]"
+            lg:py-[1.0625rem] lg:pl-[62.71px] lg:pr-[37.66px] w-full items-center flex justify-between bg-white lg:gap-[151px]"
           >
             <div className="flex items-center gap-[0.25rem]">
               <img
@@ -82,7 +82,7 @@ const Navbar = () => {
               </h1>
             </div>
 
-            <div className="flex md:hidden items-center gap-[30px]">
+            <div className="flex lg:hidden items-center gap-[30px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -123,7 +123,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className="hidden md:flex items-center gap-[1.75rem]">
+            <div className="hidden lg:flex items-center gap-[1.75rem]">
               <div className="flex items-center gap-[1.125rem]">
                 {navLinks.map((link, index) => (
                   <div
@@ -168,7 +168,7 @@ const Navbar = () => {
         <div
           id="mobile-menu"
           role="menu"
-          className={`md:hidden absolute top-[119px] left-0 w-full bg-white transition-all duration-300 ease-in-out overflow-hidden shadow-md ${
+          className={`lg:hidden absolute top-[119px] left-0 w-full bg-white transition-all duration-300 ease-in-out overflow-hidden shadow-md ${
             isMobileMenuOpen
               ? "max-h-[800px] border-b border-[#eaeaea] opacity-100"
               : "max-h-0 opacity-0"

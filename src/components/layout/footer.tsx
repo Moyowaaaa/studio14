@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <footer className="w-full text-white font-sans border-t border-t-white">
       <div className="w-full bg-navy relative overflow-hidden">
-        <div className="w-full max-w-[1440px] mx-auto px-8 lg:pl-[148px] lg:pr-[108.31px] pb-[140px] pt-[60px] lg:pt-[72px] flex flex-col lg:flex-row justify-between relative z-10 gap-12 lg:gap-0">
-          <div className="flex flex-col items-center lg:items-start max-w-[250px] mx-auto lg:mx-0">
+        <div className="w-full max-w-[1440px] mx-auto px-8 md:px-12 lg:pl-[148px] lg:pr-[108.31px] pb-[140px] pt-[60px] lg:pt-[72px] flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-between relative z-10 gap-12 md:gap-8 lg:gap-0">
+          <div className="flex flex-col items-center md:items-start lg:items-start max-w-[250px] mx-auto md:mx-0 lg:mx-0">
             <div className="flex items-center gap-[4px] mb-8">
               <img
                 src={logo}
@@ -27,13 +27,13 @@ const Footer = () => {
               </span>
             </div>
 
-            <p className="text-[18px] leading-[24.7px] font-sans tracking-[0.24px] mb-12 text-center lg:text-left">
+            <p className="text-[18px] leading-[24.7px] font-sans tracking-[0.24px] mb-12 text-center md:text-left lg:text-left">
               <span className="font-bold hidden lg:inline">EAB</span>
               <span className="lg:hidden">EAB</span> International, Third Floor,
               55 New Oxford Street, London, WC1A 1BS, UK
             </p>
 
-            <div className="flex items-center justify-center lg:justify-start gap-[17px] mb-12 mt-10">
+            <div className="flex items-center justify-center md:justify-start lg:justify-start gap-[17px] mb-12 mt-10">
               <a href="#" className="hover:opacity-80 transition-opacity">
                 <img
                   src={telegramIcon}
@@ -70,16 +70,16 @@ const Footer = () => {
             <img
               src={fundraiserImg}
               alt="Fundraiser"
-              className="w-[173px] h-[53px] hidden lg:block"
+              className="w-[173px] h-[53px] hidden md:block"
             />
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-16 w-full lg:w-auto items-center lg:items-start">
-            <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
-              <h3 className="font-serif font-semibold text-[25px] mb-8 text-center lg:text-left">
+          <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-16 w-full md:w-auto lg:w-auto items-center md:items-start lg:items-start">
+            <div className="flex flex-col items-center md:items-start lg:items-start w-full md:w-auto lg:w-auto">
+              <h3 className="font-serif font-semibold text-[25px] mb-8 text-center md:text-left lg:text-left">
                 Quick links
               </h3>
-              <ul className="flex flex-col gap-[14px] items-center lg:items-start">
+              <ul className="flex flex-col gap-[14px] items-center md:items-start lg:items-start">
                 <li>
                   <Link
                     to="#"
@@ -122,11 +122,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col items-center lg:items-start w-full lg:w-auto mt-0 lg:mt-0">
-              <h3 className="font-serif font-semibold text-[25px] mb-8 text-center lg:text-left hidden lg:block">
+            <div className="flex flex-col items-center md:items-start lg:items-start w-full md:w-auto lg:w-auto mt-0 lg:mt-0">
+              <h3 className="font-serif font-semibold text-[25px] mb-8 text-center md:text-left lg:text-left hidden md:block">
                 Quick links
               </h3>
-              <ul className="flex flex-col gap-[14px] items-center lg:items-start">
+              <ul className="flex flex-col gap-[14px] items-center md:items-start lg:items-start">
                 <li>
                   <Link
                     to="#"
@@ -203,11 +203,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center lg:items-start mt-8 lg:mt-0">
-            <h3 className="font-serif font-semibold text-[25px] mb-8 text-center lg:text-left hidden lg:block">
+          <div className="flex flex-col items-center md:items-start lg:items-start mt-8 md:mt-0 lg:mt-0 md:w-full lg:w-auto">
+            <h3 className="font-serif font-semibold text-[25px] mb-8 text-center md:text-left lg:text-left hidden md:block">
               EAB around the world
             </h3>
-            <div className="w-full max-w-[388px] px-4 lg:px-0">
+            <div className="w-full max-w-[388px] px-4 md:px-0 lg:px-0">
               <img
                 src={worldMapImg}
                 alt="World Map"
@@ -220,7 +220,7 @@ const Footer = () => {
 
       {/* Secondary Footer Section */}
       <div className="w-full bg-navy-dark py-6 px-4">
-        <div className="w-full max-w-[1440px] mx-auto flex justify-center lg:justify-start text-center lg:pl-[143px]">
+        <div className="w-full max-w-[1440px] mx-auto flex justify-center md:justify-start lg:justify-start text-center md:pl-12 lg:pl-[143px]">
           <p
             className="text-sm font-semibold flex
           font-poppins
@@ -262,7 +262,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full bg-navy-darkest py-8 px-4">
-        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 lg:px-[148px]">
+        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:px-12 lg:px-[148px]">
           <p
             className="text-[#DADADA] 
           font-poppins

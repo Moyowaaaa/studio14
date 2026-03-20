@@ -33,7 +33,7 @@ const HeroSection = () => {
   return (
     <>
       <section className="w-full">
-        <div className="w-full max-w-[90rem] px-6 lg:px-[138px] mx-auto bg-white pt-[60px] lg:pt-[5.375rem] pb-[80px] lg:pb-[8.125rem] flex flex-col gap-[60px] lg:gap-[4.75rem]">
+        <div className="w-full max-w-[90rem] px-6 md:px-12 lg:px-[138px] mx-auto bg-white pt-[60px] md:pt-[4rem] lg:pt-[5.375rem] pb-[80px] md:pb-[5rem] lg:pb-[8.125rem] flex flex-col gap-[60px] md:gap-[3rem] lg:gap-[4.75rem]">
           <div className="flex flex-col gap-[1.1875rem]">
             <h1 className="text-black font-bold text-[40px] lg:text-[3.75rem] leading-[120%] lg:leading-[105%]">
               EAB.
@@ -45,7 +45,7 @@ const HeroSection = () => {
 
           <div className="w-full flex flex-col lg:flex-row items-center lg:items-start gap-[60px] lg:gap-[5rem]">
             <div className="relative flex flex-col h-max w-full lg:w-max">
-              <div className="w-full lg:w-[35.9375rem] h-[566px] lg:h-[35.375rem] overflow-hidden">
+              <div className="w-full lg:w-[35.9375rem] h-[566px] md:h-[28rem] lg:h-[35.375rem] overflow-hidden">
                 <img
                   src={heroImage}
                   alt="Students collaborating "
@@ -87,7 +87,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="w-full lg:w-max flex flex-col items-center lg:items-start gap-[34px] lg:gap-[1.625rem]">
+            <div className="w-full lg:w-max flex flex-col md:grid md:grid-cols-3 lg:flex lg:flex-col items-center md:items-start lg:items-start gap-[34px] md:gap-8 lg:gap-[1.625rem]">
               {stats.map((stat, index) => {
                 const mobileWidths = [
                   "max-w-[172px]",
@@ -99,13 +99,13 @@ const HeroSection = () => {
                 return (
                   <div
                     key={index}
-                    className="flex flex-col items-center lg:items-start gap-[18px] lg:gap-[1.125rem] text-center lg:text-left group transition-all duration-500 hover:-translate-y-2 cursor-default"
+                    className="flex flex-col items-center md:items-start lg:items-start gap-[18px] lg:gap-[1.125rem] text-center md:text-left lg:text-left group transition-all duration-500 hover:-translate-y-2 cursor-default"
                   >
                     <h1 className="text-[60px] lg:text-[3.75rem] font-semibold font-serif leading-none lg:leading-[100%] transition-colors duration-500 group-hover:text-accent">
                       {stat.stat}
                     </h1>
                     <p
-                      className={`text-[24px] lg:text-[1.5rem] leading-[1.2] lg:leading-[120%] ${mobileWidths[index]} lg:max-w-[22.625rem] font-normal font-sans transition-colors duration-500 group-hover:text-[#444]`}
+                      className={`text-[24px] lg:text-[1.5rem] leading-[1.2] lg:leading-[120%] ${mobileWidths[index]} md:max-w-none lg:max-w-[22.625rem] font-normal font-sans transition-colors duration-500 group-hover:text-[#444]`}
                     >
                       {stat.description}
                     </p>

@@ -6,7 +6,7 @@ const TitleSection = () => {
     <>
       <section
         className="w-full md:min-h-[42rem] md:max-h-[42rem] relative
-      min-h-[547px] max-h-[547px] overflow-hidden group
+      min-h-[600px] max-h-[600px] overflow-hidden group
       "
       >
         <div className="overlay h-full inset-0 bg-black/50 w-full absolute z-20 transition-colors duration-700 group-hover:bg-black/60" />
@@ -21,15 +21,15 @@ const TitleSection = () => {
         <div className="absolute h-full inset-0 w-full z-30 flex justify-center">
           <div
             className="w-full max-w-[90rem] 
-          pt-[121px] pl-[26px]
-          md:px-[2.625rem] md:pl-[9rem] md:pt-[9.5625rem] flex flex-col 
-          gap-[82px]
+          pt-[180px] pl-[26px] 
+          md:px-[2.625rem] md:pl-[4rem] md:pt-[10rem] lg:pl-[9rem] lg:pt-[9.5625rem] flex flex-col 
+          gap-[4rem]
           md:gap-[1.9375rem] "
           >
             <h1
-              className="text-[3.75rem] md:text-[4.375rem] font-semibold leading-[105%] tracking-[0%] text-white 
+              className="text-[3.75rem] md:text-[4rem] lg:text-[4.375rem] font-semibold leading-[105%] tracking-[0%] text-white 
             max-w-[20.5625rem]
-            md:max-w-[33.937rem] transition-transform duration-700 group-hover:translate-x-2"
+            md:max-w-[30rem] lg:max-w-[33.937rem] transition-transform duration-700 group-hover:translate-x-2"
             >
               How will you make your mark?
             </h1>

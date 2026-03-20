@@ -9,7 +9,7 @@ import Footer from "../components/layout/footer";
 
 const Home = () => {
   return (
-    <div className="md:pb-[100px]">
+    <div className="lg:pb-[100px]">
       <Navbar />
       <TitleSection />
       <HeroSection />
@@ -19,7 +19,7 @@ const Home = () => {
       <EnquiryFormSection />
       <Footer />
 
-      <div className="h-[102px] w-full hidden md:flex bg-[#004A97] fixed bottom-0 left-0 z-50 items-center justify-center">
+      <div className="h-[102px] w-full hidden lg:flex bg-[#004A97] fixed bottom-0 left-0 z-50 items-center justify-center">
         <div className="w-full max-w-[90rem] mx-auto px-[144px] flex items-center gap-[38px]">
           <p
             className="font-[Poppins] 
