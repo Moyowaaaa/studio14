@@ -61,8 +61,8 @@ This project is a responsive single-page website for EAB , built as a solution f
 
 ```bash
 # Clone the repository
-git clone https://github.com/Moyowaaaa/studio14-assessment.git
-cd studio14-assessment
+git clone https://github.com/Moyowaaaa/studio14
+cd studio14
 
 # Install dependencies
 npm install

@@ -1,7 +1,16 @@
-import React from "react";
 import locationImage1 from "../../assets/images/location1-img.png";
 import locationImage2 from "../../assets/images/location2-img.png";
 import locationImage3 from "../../assets/images/location3-img.png";
+import flagIndia from "../../assets/images/openmoji_flag-india.svg";
+import flagFrance from "../../assets/images/openmoji_flag-france.svg";
+import flagGermany from "../../assets/images/openmoji_flag-germany.svg";
+import flagJapan from "../../assets/images/openmoji_flag-japan.svg";
+import flagCanada from "../../assets/images/openmoji_flag-canada.svg";
+import flagSouthAfrica from "../../assets/images/openmoji_flag-south-africa.svg";
+import flagChina from "../../assets/images/openmoji_flag-china.svg";
+import flagThailand from "../../assets/images/openmoji_flag-thailand.svg";
+import flagRussia from "../../assets/images/openmoji_flag-russia.svg";
+import flagKenya from "../../assets/images/openmoji_flag-kenya.svg";
 
 type Location = {
   name: string;
@@ -11,48 +20,16 @@ type Location = {
 
 const LocationsSection = () => {
   const locations: Location[] = [
-    {
-      name: "India",
-      flag: "/src/assets/images/openmoji_flag-india.svg",
-      isSelected: true,
-    },
-    {
-      name: "France",
-      flag: "/src/assets/images/openmoji_flag-france.svg",
-    },
-    {
-      name: "Germany",
-      flag: "/src/assets/images/openmoji_flag-germany.svg",
-    },
-    {
-      name: "Japan",
-      flag: "/src/assets/images/openmoji_flag-japan.svg",
-    },
-    {
-      name: "Canada",
-      flag: "/src/assets/images/openmoji_flag-canada.svg",
-    },
-    {
-      name: "South Africa",
-      flag: "/src/assets/images/openmoji_flag-south-africa.svg",
-    },
-    {
-      name: "China",
-      flag: "/src/assets/images/openmoji_flag-china.svg",
-    },
-
-    {
-      name: "Thailand",
-      flag: "/src/assets/images/openmoji_flag-thailand.svg",
-    },
-    {
-      name: "Russia",
-      flag: "/src/assets/images/openmoji_flag-russia.svg",
-    },
-    {
-      name: "Kenya",
-      flag: "/src/assets/images/openmoji_flag-kenya.svg",
-    },
+    { name: "India", flag: flagIndia, isSelected: true },
+    { name: "France", flag: flagFrance },
+    { name: "Germany", flag: flagGermany },
+    { name: "Japan", flag: flagJapan },
+    { name: "Canada", flag: flagCanada },
+    { name: "South Africa", flag: flagSouthAfrica },
+    { name: "China", flag: flagChina },
+    { name: "Thailand", flag: flagThailand },
+    { name: "Russia", flag: flagRussia },
+    { name: "Kenya", flag: flagKenya },
   ];
   return (
     <>
