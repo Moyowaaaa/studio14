@@ -48,13 +48,13 @@ const HeroSection = () => {
               <div className="w-full lg:w-[35.9375rem] h-[566px] lg:h-[35.375rem] overflow-hidden">
                 <img
                   src={heroImage}
-                  alt="hero"
+                  alt="Students collaborating "
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
 
               <div className="w-full relative lg:absolute mt-[-196px] lg:mt-0 lg:-bottom-[7.5rem] lg:pl-[2.5625rem] z-10">
-                <div className="bg-[#009482] text-white font-semibold font-[source-sans-3] relative h-[262px] w-full lg:static lg:h-auto lg:w-[29.875rem] lg:max-w-[29.875rem] lg:pt-[3.0625rem] lg:pb-[2.6875rem] lg:px-[2.125rem] flex flex-col lg:justify-start">
+                <div className="bg-accent text-white font-semibold font-sans-3 relative h-[262px] w-full lg:static lg:h-auto lg:w-[29.875rem] lg:max-w-[29.875rem] lg:pt-[3.0625rem] lg:pb-[2.6875rem] lg:px-[2.125rem] flex flex-col lg:justify-start">
                   <div className="absolute top-[18px] left-[35px] w-[302px] h-[183px] lg:static lg:w-auto lg:h-[11.4375rem] text-[20px] lg:text-[1.625rem] font-semibold leading-[1.2] lg:leading-[1.9375rem] flex flex-col justify-start lg:justify-center">
                     <p>
                       At EAB, our mission is to inspire young people to put
@@ -64,7 +64,7 @@ const HeroSection = () => {
                   </div>
 
                   <div className="absolute top-[197px] left-[34px] right-[35px] lg:static lg:w-full lg:pt-[1.5rem] flex items-center justify-between group cursor-pointer">
-                    <p className="font-bold font-[source-sans-pro] text-[18px] lg:text-[1.125rem] leading-[1.2] lg:leading-[120%] text-white transition-colors duration-300 group-hover:text-[#e0e0e0]">
+                    <p className="font-bold font-sans text-[18px] lg:text-[1.125rem] leading-[1.2] lg:leading-[120%] text-white transition-colors duration-300 group-hover:text-[#e0e0e0]">
                       Read more
                     </p>
 
@@ -74,6 +74,7 @@ const HeroSection = () => {
                       height="15"
                       viewBox="0 0 39 15"
                       fill="none"
+                      aria-hidden="true"
                       className="transition-transform duration-300 group-hover:translate-x-2"
                     >
                       <path
@@ -88,7 +89,6 @@ const HeroSection = () => {
 
             <div className="w-full lg:w-max flex flex-col items-center lg:items-start gap-[34px] lg:gap-[1.625rem]">
               {stats.map((stat, index) => {
-                // Map the specific max-widths from Figma for mobile descriptions
                 const mobileWidths = [
                   "max-w-[172px]",
                   "max-w-[216px]",
@@ -101,11 +101,11 @@ const HeroSection = () => {
                     key={index}
                     className="flex flex-col items-center lg:items-start gap-[18px] lg:gap-[1.125rem] text-center lg:text-left group transition-all duration-500 hover:-translate-y-2 cursor-default"
                   >
-                    <h1 className="text-[60px] lg:text-[3.75rem] font-semibold font-[source-serif] leading-none lg:leading-[100%] transition-colors duration-500 group-hover:text-[#009582]">
+                    <h1 className="text-[60px] lg:text-[3.75rem] font-semibold font-serif leading-none lg:leading-[100%] transition-colors duration-500 group-hover:text-accent">
                       {stat.stat}
                     </h1>
                     <p
-                      className={`text-[24px] lg:text-[1.5rem] leading-[1.2] lg:leading-[120%] ${mobileWidths[index]} lg:max-w-[22.625rem] font-normal font-[source-sans-pro] transition-colors duration-500 group-hover:text-[#444]`}
+                      className={`text-[24px] lg:text-[1.5rem] leading-[1.2] lg:leading-[120%] ${mobileWidths[index]} lg:max-w-[22.625rem] font-normal font-sans transition-colors duration-500 group-hover:text-[#444]`}
                     >
                       {stat.description}
                     </p>
