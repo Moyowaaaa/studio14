@@ -133,7 +133,10 @@ export const ImpactSection = () => {
 
   return (
     <>
-      <section className="w-full bg-[#EDF5FF] pt-[60px] pb-[80px] md:pt-[7.1875rem] md:pb-[9.25rem] flex flex-col gap-[40px] md:gap-[62px]">
+      <section
+        aria-label="The impact of EAB"
+        className="w-full bg-[#EDF5FF] pt-[60px] pb-[80px] md:pt-[7.1875rem] md:pb-[9.25rem] flex flex-col gap-[40px] md:gap-[62px]"
+      >
         <div className="w-full max-w-[90rem] mx-auto px-6 md:px-[162px] flex flex-col md:flex-row items-start justify-between gap-8 md:gap-0">
           <div className="flex flex-col gap-4 md:gap-[29px]">
             <h1 className="font-semibold text-[40px] md:text-[3.75rem] leading-[120%] md:leading-[100%]">
@@ -143,7 +146,7 @@ export const ImpactSection = () => {
             <p
               className="text-[18px] md:text-[1.25rem] 
               max-w-full md:max-w-[45.4375rem]
-              leading-[164%] md:leading-[130%] font-[source-sans-pro]"
+              leading-[164%] md:leading-[130%] font-sans"
             >
               Consectetur adipiscing elit duis tristique sollicitudin nibh sit
               amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus
@@ -156,7 +159,7 @@ export const ImpactSection = () => {
               <React.Fragment key={filter}>
                 <button
                   onClick={() => handleFilterClick(index)}
-                  className={`leading-[120%] text-[20px] md:text-[1.5rem] font-bold font-[source-sans-pro] transition-colors duration-300 cursor-pointer ${
+                  className={`leading-[120%] text-[20px] md:text-[1.5rem] font-bold font-sans transition-colors duration-300 cursor-pointer ${
                     activeIndex === index
                       ? "text-black"
                       : "text-[#95A4B8] hover:text-[#6b7a8d]"
@@ -178,11 +181,15 @@ export const ImpactSection = () => {
           ref={carouselRef}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          role="region"
+          aria-roledescription="carousel"
           className="w-full overflow-x-auto flex items-start gap-[20px] md:gap-[30px] snap-x snap-mandatory scroll-smooth hide-scrollbar px-6 md:px-0"
           style={{ scrollbarWidth: "none" }}
         >
           {slides.map((slide, index) => (
             <div
+              role="group"
+              aria-roledescription="slide"
               key={index}
               className="w-full min-w-full md:w-[67.0625rem] md:min-w-[67.0625rem] mx-auto h-max flex flex-col md:flex-row items-start md:items-center gap-[27px] md:gap-[47px] snap-center"
             >
@@ -195,25 +202,26 @@ export const ImpactSection = () => {
               </div>
 
               <div className="flex flex-col gap-[16px] md:gap-[27px] w-full">
-                <h1 className="font-[source-serif] font-semibold text-[24px] md:text-[2.5rem] leading-[120%] w-full md:max-w-[383px] md:min-w-[383px]">
+                <h1 className="font-serif font-semibold text-[24px] md:text-[2.5rem] leading-[120%] w-full md:max-w-[383px] md:min-w-[383px]">
                   {slide.title}
                 </h1>
                 <p
                   className="text-[18px] md:text-[1.25rem] 
                   w-full md:max-w-[383px] md:min-w-[383px]
-                  leading-[164%] font-[source-sans-pro]"
+                  leading-[164%] font-sans"
                 >
                   {slide.description}
                 </p>
 
                 <div className="flex items-center gap-[1.0625rem] group w-max cursor-pointer mt-2 md:mt-0">
-                  <div className="w-[54px] h-[53px] md:w-[3.375rem] md:h-[3.3125rem] rounded-[30px] md:rounded-full flex items-center justify-center bg-[#009482] transition-transform duration-300 group-hover:translate-x-2">
+                  <div className="w-[54px] h-[53px] md:w-[3.375rem] md:h-[3.3125rem] rounded-[30px] md:rounded-full flex items-center justify-center bg-accent transition-transform duration-300 group-hover:translate-x-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="22"
                       viewBox="0 0 13 22"
                       fill="none"
+                      aria-hidden="true"
                     >
                       <path
                         d="M2 19.9167L10.9583 10.9584L2 2.00008"
@@ -225,7 +233,7 @@ export const ImpactSection = () => {
                     </svg>
                   </div>
 
-                  <p className="font-bold text-[24px] md:text-[1.5rem] leading-[120%] font-[source-sans-pro] transition-colors duration-300 group-hover:text-[#009482]">
+                  <p className="font-bold text-[24px] md:text-[1.5rem] leading-[120%] font-sans transition-colors duration-300 group-hover:text-accent">
                     {slide.cta}
                   </p>
                 </div>

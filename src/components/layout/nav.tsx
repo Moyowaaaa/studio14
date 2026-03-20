@@ -45,8 +45,8 @@ const Navbar = () => {
                 <button className="flex items-center gap-[0.5rem] text-[#222222] font-bold font-[source-sans-pro] text-[1rem] hover:text-[#009482] transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="31"
-                    height="31"
+                    width="25"
+                    height="25"
                     viewBox="0 0 31 31"
                     fill="none"
                     aria-label="Search"
@@ -240,7 +240,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="w-full px-[26px] flex items-center gap-[10px] pb-[35px]">
+            <div className="w-full px-[26px] flex items-center gap-[10px] pb-[35px] mt-6">
               <button className="flex-1 bg-[#AD1644] text-white text-[18px] leading-[1.2] font-bold items-center justify-center rounded-[25px] h-[46px] hover:bg-[#8a1136] transition-colors font-[source-sans-pro]">
                 Donate
               </button>

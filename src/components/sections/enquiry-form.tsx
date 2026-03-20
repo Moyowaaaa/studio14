@@ -7,9 +7,9 @@ const EnquiryFormSection = () => {
         <div className="h-max flex justify-end max-w-[90rem] mx-auto px-4 md:px-[8.1875rem]">
           <div
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group h-[49px] bg-[#0B3057] w-[159px] hidden md:flex items-center justify-between px-[1rem] cursor-pointer transition-colors duration-300 hover:bg-[#104076]"
+            className="group h-[49px] bg-navy w-[159px] hidden md:flex items-center justify-between px-[1rem] cursor-pointer transition-colors duration-300 hover:bg-[#104076]"
           >
-            <p className="text-white font-bold text-[1.125rem] leading-[120%] font-[source-sans-pro]">
+            <p className="text-white font-bold text-[1.125rem] leading-[120%] font-sans">
               Back to Top
             </p>
             <svg
@@ -27,7 +27,7 @@ const EnquiryFormSection = () => {
             </svg>
           </div>
         </div>
-        <div className="w-full bg-[#0B3057]">
+        <div className="w-full bg-navy">
           <div
             className="w-full max-w-[90rem] 
         flex flex-col gap-8 md:gap-[2.4375rem]
@@ -35,7 +35,7 @@ const EnquiryFormSection = () => {
           >
             <h1
               className="
-            font-[source-serif]
+            font-serif
             text-center font-semibold text-4xl md:text-[3.75rem] leading-[100%] text-white max-w-full md:max-w-[40.125rem]"
             >
               We are present in over 150 countries
@@ -51,15 +51,20 @@ const EnquiryFormSection = () => {
                 <div className="grid grid-cols-1 gap-4 md:gap-[1.6244rem] ">
                   <div className="relative w-full">
                     <input
+                      name="subject"
                       type="text"
                       placeholder=" "
+                      required
                       aria-required="true"
                       className="peer w-full h-[3.75rem] 
                     px-[2rem]
-                    text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
-                    max-h-[3.75rem] bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-[#ad1644] focus:ring-1 focus:ring-[#ad1644]"
+                    text-black font-sans font-normal text-[1.125rem] leading-[164%]
+                    max-h-[3.75rem] bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
                     />
-                    <span className="absolute left-[2rem] top-1/2 -translate-y-1/2 text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300">
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-[2rem] top-1/2 -translate-y-1/2 text-black font-sans font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300"
+                    >
                       Subject <span className="text-red-500">*</span>
                     </span>
 
@@ -98,15 +103,19 @@ const EnquiryFormSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[1.6244rem] ">
                   <div className="relative w-full">
                     <input
-                      type="text"
                       placeholder=" "
                       aria-required="true"
+                      name="fullName"
+                      type="text"
                       className="peer w-full h-[3.75rem] max-h-[3.75rem]
                     px-[2rem]
-                    text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
-                    bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-[#ad1644] focus:ring-1 focus:ring-[#ad1644]"
+                    text-black font-sans font-normal text-[1.125rem] leading-[164%]
+                    bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
                     />
-                    <span className="absolute left-[2rem] top-1/2 -translate-y-1/2 text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300">
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-[2rem] top-1/2 -translate-y-1/2 text-black font-sans font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300"
+                    >
                       Full Name <span className="text-red-500">*</span>
                     </span>
                   </div>
@@ -119,10 +128,13 @@ const EnquiryFormSection = () => {
                       className="peer w-full h-[3.75rem]
                       
                     px-[2rem]
-                    text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
-                    max-h-[3.75rem] bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-[#ad1644] focus:ring-1 focus:ring-[#ad1644]"
+                    text-black font-sans font-normal text-[1.125rem] leading-[164%]
+                    max-h-[3.75rem] bg-white border border-[#cecece] rounded-[0.3125rem] transition-all duration-300 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
                     />
-                    <span className="absolute left-[2rem] top-1/2 -translate-y-1/2 text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300">
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-[2rem] top-1/2 -translate-y-1/2 text-black font-sans font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300"
+                    >
                       Email address <span className="text-red-500">*</span>
                     </span>
                   </div>
@@ -130,11 +142,17 @@ const EnquiryFormSection = () => {
 
                 <div className="relative w-full">
                   <textarea
+                    name="message"
+                    required
+                    aria-required="true"
                     placeholder=" "
-                    className="peer w-full resize-none text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%]
-                  pt-[1rem] px-[2rem] h-[12.5rem] rounded-[0.3125rem] border border-[#cecece] bg-white transition-all duration-300 focus:outline-none focus:border-[#ad1644] focus:ring-1 focus:ring-[#ad1644]"
+                    className="peer w-full resize-none text-black font-sans font-normal text-[1.125rem] leading-[164%]
+                  pt-[1rem] px-[2rem] h-[12.5rem] rounded-[0.3125rem] border border-[#cecece] bg-white transition-all duration-300 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
                   />
-                  <span className="absolute left-[2rem] top-[1rem] text-black font-[source-sans-pro] font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300">
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-[2rem] top-[1rem] text-black font-sans font-normal text-[1.125rem] leading-[164%] pointer-events-none opacity-0 peer-placeholder-shown:opacity-100 transition-opacity duration-300"
+                  >
                     Message <span className="text-red-500">*</span>
                   </span>
                 </div>
@@ -145,8 +163,8 @@ const EnquiryFormSection = () => {
                 className="w-full md:w-[14.375rem]
           text-[1.125rem] font-bold leading-[120%]
           md:max-w-[14.375rem] flex items-center
-          font-[source-sans-pro]
-          justify-center h-[3.75rem] max-h-[3.75rem] bg-[#ad1644] text-white rounded-[0.3125rem] transition-all duration-300 hover:bg-[#8a1236] hover:shadow-lg active:scale-95"
+          font-sans
+          justify-center h-[3.75rem] max-h-[3.75rem] bg-secondary text-white rounded-[0.3125rem] transition-all duration-300 hover:bg-secondary-dark hover:shadow-lg active:scale-95"
               >
                 Submit
               </button>

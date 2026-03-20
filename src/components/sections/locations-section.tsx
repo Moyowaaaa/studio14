@@ -64,7 +64,7 @@ const LocationsSection = () => {
             </h1>
 
             <div className="flex items-center group cursor-pointer md:mt-4">
-              <p className="pb-[0.1875rem] border-b border-black font-[source-sans-pro] text-[24px] lg:text-[1.5rem] leading-[120%] transition-colors duration-300 group-hover:text-[#004A97] group-hover:border-[#004A97]">
+              <p className="pb-[0.1875rem] border-b border-black font-sans text-[24px] lg:text-[1.5rem] leading-[120%] transition-colors duration-300 group-hover:text-primary group-hover:border-primary">
                 See all National Schools
               </p>
 
@@ -74,12 +74,13 @@ const LocationsSection = () => {
                 height="15"
                 viewBox="0 0 43 15"
                 fill="none"
+                aria-hidden="true"
                 className="transition-transform duration-300 group-hover:translate-x-2 ml-2"
               >
                 <path
                   d="M36.671 14.961L43 7.9805L36.671 1L35.3229 2.7246L39.0218 6.80383H4V9.15717H39.0218L35.3229 13.2368L36.671 14.961Z"
                   fill="black"
-                  className="transition-colors duration-300 group-hover:fill-[#004A97]"
+                  className="transition-colors duration-300 group-hover:fill-primary"
                 />
                 <rect width="26" height="13" fill="white" />
               </svg>
@@ -95,16 +96,16 @@ const LocationsSection = () => {
                 key={location.name}
                 className={`${
                   location.isSelected
-                    ? "pl-[7px] border-b-[3px] border-b-[#004a97] opacity-100"
+                    ? "pl-[7px] border-b-[3px] border-b-primary opacity-100"
                     : "opacity-30 hover:opacity-100"
                 } w-max  flex items-center gap-[0.8125rem] cursor-pointer transition-all duration-300 hover:-translate-y-1`}
               >
                 <img
                   src={location.flag}
-                  alt="flag"
+                  alt={`${location.name} flag`}
                   className="w-[44px] h-[44px] object-contain"
                 />
-                <p className="text-sm font-semibold leading-[1.9375rem] font-[source-sans-3] whitespace-nowrap">
+                <p className="text-sm font-semibold leading-[1.9375rem] font-sans-3 whitespace-nowrap">
                   {location.name}
                 </p>
               </div>
@@ -117,11 +118,11 @@ const LocationsSection = () => {
               <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
                 <img
                   src={locationImage1}
-                  alt="location image 1"
+                  alt=" program in Germany"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute w-[74px] h-[36px] left-[1.375rem] top-[1.6875rem] flex items-center justify-center bg-[#ad1644] lg:hidden">
-                  <p className="text-sm font-semibold text-white leading-[120%] font-[source-sans-pro]">
+                <div className="absolute w-[74px] h-[36px] left-[1.375rem] top-[1.6875rem] flex items-center justify-center bg-secondary lg:hidden">
+                  <p className="text-sm font-semibold text-white leading-[120%] font-sans">
                     Apply
                   </p>
                 </div>
@@ -135,21 +136,21 @@ const LocationsSection = () => {
                 }}
               />
 
-              <div className="w-full h-[217px] lg:h-full bg-[#ad1644] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+              <div className="w-full h-[217px] lg:h-full bg-secondary lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
                 <div className="mb-[41px] w-[74px] h-[36px] hidden md:flex items-center justify-center bg-white ">
-                  <p className="text-sm font-normal text-black leading-[120%] font-[source-sans-pro]">
+                  <p className="text-sm font-normal text-black leading-[120%] font-sans">
                     Germany
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-[1.25rem]">
-                  <h1 className="font-[source-serif] font-semibold text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[290px]">
+                  <h3 className="font-serif font-semibold text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[290px]">
                     Leveraging the EAB Ripple Effect' for Youth-led Social
                     Change
-                  </h1>
+                  </h3>
                   <button
                     className=" 
-                  font-[source-sans-pro]
+                  font-sans
                   
                   h-[3rem] max-h-[3rem] w-[180px] lg:w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-[18px]  font-bold lg:font-semibold self-start transition-all duration-300 hover:bg-black hover:text-white"
                   >
@@ -164,11 +165,11 @@ const LocationsSection = () => {
               <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
                 <img
                   src={locationImage2}
-                  alt="location image 2"
+                  alt="Alimni network"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#009482] text-white flex items-center justify-center lg:hidden">
-                  <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
+                <div className="absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-accent text-white flex items-center justify-center lg:hidden">
+                  <p className="text-sm font-sans text-white leading-[120%]">
                     Alumni Network
                   </p>
                 </div>
@@ -182,20 +183,20 @@ const LocationsSection = () => {
                 }}
               />
 
-              <div className="w-full h-[217px] lg:h-full bg-[#009482] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
-                <div className="hidden lg:flex absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#009482] text-white items-center justify-center">
-                  <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
+              <div className="w-full h-[217px] lg:h-full bg-accent lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
+                <div className="hidden lg:flex absolute w-[115px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-accent text-white items-center justify-center">
+                  <p className="text-sm font-sans text-white leading-[120%]">
                     Alumni Network
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-[1.25rem]">
-                  <h1 className="font-[source-serif] font-semibold flex items-center text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[285px] md:h-[92px]">
+                  <h3 className="font-serif font-semibold flex items-center text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[285px] md:h-[92px]">
                     A title about volunteering in this National Schools
-                  </h1>
+                  </h3>
                   <button
                     className="
-                  font-[source-sans-pro]
+                  font-sans
                   
                   h-[3rem] max-h-[3rem] w-[180px] lg:w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-[18px] font-bold lg:font-semibold self-start transition-all duration-300 hover:bg-black hover:text-white"
                   >
@@ -210,11 +211,11 @@ const LocationsSection = () => {
               <div className="relative w-full h-[372px] lg:h-full lg:absolute lg:inset-0 overflow-hidden">
                 <img
                   src={locationImage3}
-                  alt="location image 3"
+                  alt="whats happening "
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white flex items-center justify-center lg:hidden">
-                  <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
+                  <p className="text-sm font-sans text-white leading-[120%]">
                     What's happening
                   </p>
                 </div>
@@ -230,18 +231,18 @@ const LocationsSection = () => {
 
               <div className="w-full h-[217px] lg:h-full bg-[#0059B9] lg:bg-transparent lg:absolute lg:inset-0 z-5 px-[1.75rem] pb-[2.0625rem] pt-[1.625rem] lg:pt-[1.6875rem] flex flex-col justify-end">
                 <div className="hidden lg:flex absolute w-[125px] h-[36px] left-[1.375rem] top-[1.6875rem] bg-[#0059B9] text-white items-center justify-center">
-                  <p className="text-sm font-[source-sans-pro] text-white leading-[120%]">
+                  <p className="text-sm font-sans text-white leading-[120%]">
                     What's happening
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-[1.25rem] md:gap-[2.625rem]">
-                  <h1 className="font-[source-serif] font-semibold text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[299px]">
+                  <h3 className="font-serif font-semibold text-[24px] lg:text-[1.5rem] leading-[120%] text-white max-w-[299px]">
                     This is a blog/Impact Story linked to this National Schools
-                  </h1>
+                  </h3>
                   <button
                     className="
-                  font-[source-sans-pro]
+                  font-sans
                   h-[3rem] max-h-[3rem] w-[180px] lg:w-[11.25rem] flex items-center justify-center bg-white rounded-[52px] text-black text-[1.125rem] font-bold lg:font-semibold self-start transition-all duration-300 hover:bg-black hover:text-white"
                   >
                     Read more

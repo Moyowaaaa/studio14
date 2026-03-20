@@ -13,7 +13,7 @@ import studio14Logo from "../../assets/images/studio14logo.svg";
 const Footer = () => {
   return (
     <footer className="w-full text-white font-sans border-t border-t-white">
-      <div className="w-full bg-[#0B3057] relative overflow-hidden">
+      <div className="w-full bg-navy relative overflow-hidden">
         <div className="w-full max-w-[1440px] mx-auto px-8 lg:pl-[148px] lg:pr-[108.31px] pb-[140px] pt-[60px] lg:pt-[72px] flex flex-col lg:flex-row justify-between relative z-10 gap-12 lg:gap-0">
           <div className="flex flex-col items-center lg:items-start max-w-[250px] mx-auto lg:mx-0">
             <div className="flex items-center gap-[4px] mb-8">
@@ -22,12 +22,12 @@ const Footer = () => {
                 alt="Logo"
                 className="w-[41px] h-[41px] object-contain"
               />
-              <span className=" font-semibold text-[50px] leading-none font-[source-serif]">
+              <span className=" font-semibold text-[50px] leading-none font-serif">
                 EAB
               </span>
             </div>
 
-            <p className="text-[18px] leading-[24.7px] font-[source-sans-pro] tracking-[0.24px] mb-12 text-center lg:text-left">
+            <p className="text-[18px] leading-[24.7px] font-sans tracking-[0.24px] mb-12 text-center lg:text-left">
               <span className="font-bold hidden lg:inline">EAB</span>
               <span className="lg:hidden">EAB</span> International, Third Floor,
               55 New Oxford Street, London, WC1A 1BS, UK
@@ -76,7 +76,7 @@ const Footer = () => {
 
           <div className="flex flex-col lg:flex-row gap-4 lg:gap-16 w-full lg:w-auto items-center lg:items-start">
             <div className="flex flex-col items-center lg:items-start w-full lg:w-auto">
-              <h3 className="font-[source-serif] font-semibold text-[25px] mb-8 text-center lg:text-left">
+              <h3 className="font-serif font-semibold text-[25px] mb-8 text-center lg:text-left">
                 Quick links
               </h3>
               <ul className="flex flex-col gap-[14px] items-center lg:items-start">
@@ -123,7 +123,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="flex flex-col items-center lg:items-start w-full lg:w-auto mt-0 lg:mt-0">
-              <h3 className="font-[source-serif] font-semibold text-[25px] mb-8 text-center lg:text-left hidden lg:block">
+              <h3 className="font-serif font-semibold text-[25px] mb-8 text-center lg:text-left hidden lg:block">
                 Quick links
               </h3>
               <ul className="flex flex-col gap-[14px] items-center lg:items-start">
@@ -204,7 +204,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center lg:items-start mt-8 lg:mt-0">
-            <h3 className="font-[source-serif] font-semibold text-[25px] mb-8 text-center lg:text-left hidden lg:block">
+            <h3 className="font-serif font-semibold text-[25px] mb-8 text-center lg:text-left hidden lg:block">
               EAB around the world
             </h3>
             <div className="w-full max-w-[388px] px-4 lg:px-0">
@@ -219,11 +219,11 @@ const Footer = () => {
       </div>
 
       {/* Secondary Footer Section */}
-      <div className="w-full bg-[#07294C] py-6 px-4">
+      <div className="w-full bg-navy-dark py-6 px-4">
         <div className="w-full max-w-[1440px] mx-auto flex justify-center lg:justify-start text-center lg:pl-[143px]">
           <p
             className="text-sm font-semibold flex
-          font-[Poppins]
+          font-poppins
           flex-wrap justify-center lg:justify-start items-center gap-2"
           >
             <Link to="#" className="hover:underline">
@@ -261,11 +261,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full bg-[#102439] py-8 px-4">
+      <div className="w-full bg-navy-darkest py-8 px-4">
         <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 lg:px-[148px]">
           <p
             className="text-[#DADADA] 
-          font-[Poppins]
+          font-poppins
           
           text-xs font-semibold max-w-[857px] text-center md:text-left leading-relaxed"
           >
