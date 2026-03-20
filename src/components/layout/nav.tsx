@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../../assets/images/logo.svg";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
     "About us",
